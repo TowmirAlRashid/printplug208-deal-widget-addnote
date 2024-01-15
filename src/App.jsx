@@ -975,16 +975,7 @@ function App() {
         >
           <Button
             onClick={() => {
-              // reset({
-              //   Assign_To: [name],
-              //   Project_Name: null,
-              //   Account_Manager: "",
-              //   Name: "",
-              //   Task_Status: "",
-              //   Billable: "",
-              // });
-              // setAttachments([]);
-              // handleClose();
+              ZOHO.CRM.UI.Popup.close();
             }}
             variant="outlined"
           >
