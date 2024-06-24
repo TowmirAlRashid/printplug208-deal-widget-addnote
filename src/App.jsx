@@ -234,7 +234,11 @@ function App() {
         newLine +
         newLine +
         "Typical mockup turnaround time is 24-48 hours (excluding weekends). Customer acknowledged?: " +
-        data?.typicalMockup,
+        data?.typicalMockup +
+        newLine +
+        newLine +
+        "Supplies / Materials Needed for Deal: " +
+        data?.suppliesAndMaterialsNeeded,
     });
     if (response?.data?.[0]?.code) {
       ZOHO.CRM.UI.Popup.closeReload();
@@ -983,6 +987,32 @@ function App() {
                       error={errors["typicalMockup"]}
                     />
                   )}
+                />
+              </>
+            )}
+          />
+
+          <Controller
+            control={control}
+            name="suppliesAndMaterialsNeeded"
+            rules={{ required: true }}
+            render={({ field }) => (
+              <>
+                <FormLabel
+                  id="name"
+                  sx={{ mb: "10px", mt: "16px", color: "black" }}
+                >
+                  Supplies / Materials Needed for Deal
+                </FormLabel>
+                <TextField
+                  multiline
+                  rows={3}
+                  id="suppliesAndMaterialsNeeded"
+                  variant="outlined"
+                  fullWidth
+                  {...field}
+                  sx={{ mb: "1rem", mt: "5px" }}
+                  error={errors["suppliesAndMaterialsNeeded"]}
                 />
               </>
             )}
