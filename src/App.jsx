@@ -128,117 +128,125 @@ function App() {
       Title: "Deal Onboarding Form",
       Content:
         "CONTACT INFO" +
-        newLine +
-        newLine +
-        "Account Name: " +
-        data?.accountName +
-        newLine +
-        newLine +
-        "Contact Name: " +
-        data?.contactName +
-        newLine +
-        newLine +
-        "Contact Phone: " +
-        data?.contactPhone +
-        newLine +
-        newLine +
-        "Contact Email: " +
-        data?.contactEmail +
-        newLine +
-        newLine +
-        "Deal Name: " +
-        data?.dealName +
-        newLine +
-        newLine +
-        newLine +
-        "GRAPHIC INFO" +
-        newLine +
-        newLine +
-        "Preferred graphic application if any: " +
-        data?.preferedGraphicApplication?.join(", ") +
-        newLine +
-        newLine +
-        "Are graphics ready?: " +
-        data?.areGraphicsReady +
-        newLine +
-        newLine +
-        "Current graphic format(s): " +
-        data?.currentGraphicFormat?.join(", ") +
-        newLine +
-        newLine +
-        `${
-          isOtherSelected &&
-          "Describe what other format the client uses: " +
-            data?.otherOption +
-            newLine +
-            newLine
-        }` +
-        "If we are doing (or re-doing) the graphics, graphic fees may apply (fees range from $30 for basic graphic manipulation to $150 for full logo design). Customer acknowledged?: " +
-        data?.customerAcknowledged +
-        newLine +
-        newLine +
-        "Number of colors in graphic: " +
-        data?.numberOfColors +
-        newLine +
-        newLine +
-        "Fonts used in graphic: " +
-        data?.fontsUsedInGraphic +
-        newLine +
-        newLine +
-        "Color of PANTONES, HEX, RGB, CMYK or equivalent: " +
-        data?.colorOfPantones +
-        newLine +
-        newLine +
-        "Thread color for embroidery: " +
-        data?.threadColor +
-        newLine +
-        newLine +
-        "Number of placements: " +
-        data?.numberOfPlacements +
-        newLine +
-        newLine +
-        "Specific placements and dimensions: " +
-        data?.specificPlacements +
-        newLine +
-        newLine +
-        newLine +
-        "GARMENT INFO (IF GARMENTS ARE PROVIDED BY US)" +
-        newLine +
-        newLine +
-        "Are we providing the garments?: " +
-        data?.areWeProvidingGarments +
-        newLine +
-        newLine +
-        "Types (brand and style) of garments: " +
-        data?.typeOfGarments +
-        newLine +
-        newLine +
-        "Size(s) and color(s) of garments: " +
-        data?.sizeAndColorOfGarments +
-        newLine +
-        newLine +
-        newLine +
-        "TURNAROUND TIME" +
-        newLine +
-        newLine +
-        "Due Date: " +
-        customDate(data?.Due_Date) +
-        newLine +
-        newLine +
-        "Rush orders with deadlines under 2 weeks can incur a rush fee. Customer acknowledged?: " +
-        data?.rushOrdersWithDeadline +
-        newLine +
-        newLine +
-        "10 - 14 business days from point of mockup approval for typical turnaround time. Deadlines can be affected by garment availability, shipping delays, etc. Customer acknowledged?: " +
-        data?.deadlinesAffected +
-        newLine +
-        newLine +
-        "Typical mockup turnaround time is 24-48 hours (excluding weekends). Customer acknowledged?: " +
-        data?.typicalMockup +
-        newLine +
-        newLine +
-        "Supplies / Materials Needed for Deal: " +
-        data?.suppliesAndMaterialsNeeded,
+          newLine +
+          newLine +
+          "Account Name: " +
+          data?.accountName +
+          newLine +
+          newLine +
+          "Contact Name: " +
+          data?.contactName +
+          newLine +
+          newLine +
+          "Contact Phone: " +
+          data?.contactPhone +
+          newLine +
+          newLine +
+          "Contact Email: " +
+          data?.contactEmail +
+          newLine +
+          newLine +
+          "Deal Name: " +
+          data?.dealName +
+          newLine +
+          newLine +
+          newLine +
+          "GRAPHIC INFO" +
+          newLine +
+          newLine +
+          "Preferred graphic application if any: " +
+          data?.preferedGraphicApplication?.join(", ") +
+          newLine +
+          newLine +
+          "Are graphics ready?: " +
+          data?.areGraphicsReady +
+          newLine +
+          newLine +
+          "Current graphic format(s): " +
+          data?.currentGraphicFormat?.join(", ") +
+          newLine +
+          newLine +
+          `${
+            isOtherSelected &&
+            "Describe what other format the client uses: " +
+              data?.otherOption +
+              newLine +
+              newLine
+          }` +
+          "If we are doing (or re-doing) the graphics, graphic fees may apply (fees range from $30 for basic graphic manipulation to $150 for full logo design). Customer acknowledged?: " +
+          data?.customerAcknowledged +
+          newLine +
+          newLine +
+          "Number of colors in graphic: " +
+          data?.numberOfColors +
+          newLine +
+          newLine +
+          "Fonts used in graphic: " +
+          data?.fontsUsedInGraphic +
+          newLine +
+          newLine +
+          "Color of PANTONES, HEX, RGB, CMYK or equivalent: " +
+          data?.colorOfPantones +
+          newLine +
+          newLine +
+          "Thread color for embroidery: " +
+          data?.threadColor +
+          newLine +
+          newLine +
+          "Number of placements: " +
+          data?.numberOfPlacements +
+          newLine +
+          newLine +
+          "Specific placements and dimensions: " +
+          data?.specificPlacements +
+          newLine +
+          newLine +
+          newLine +
+          "GARMENT INFO (IF GARMENTS ARE PROVIDED BY US)" +
+          newLine +
+          newLine +
+          "Are we providing the garments?: " +
+          data?.areWeProvidingGarments +
+          newLine +
+          newLine +
+          "Types (brand and style) of garments: " +
+          data?.typeOfGarments +
+          newLine +
+          newLine +
+          "Size(s) and color(s) of garments: " +
+          data?.sizeAndColorOfGarments +
+          newLine +
+          newLine +
+          newLine +
+          "TURNAROUND TIME" +
+          newLine +
+          newLine +
+          "Due Date: " +
+          customDate(data?.Due_Date) +
+          newLine +
+          newLine +
+          "Rush orders with deadlines under 2 weeks can incur a rush fee. Customer acknowledged?: " +
+          data?.rushOrdersWithDeadline +
+          newLine +
+          newLine +
+          "10 - 14 business days from point of mockup approval for typical turnaround time. Deadlines can be affected by garment availability, shipping delays, etc. Customer acknowledged?: " +
+          data?.deadlinesAffected +
+          newLine +
+          newLine +
+          "Typical mockup turnaround time is 24-48 hours (excluding weekends). Customer acknowledged?: " +
+          data?.typicalMockup +
+          newLine +
+          newLine +
+          "Supplies / Materials Needed for Deal: " +
+          data?.suppliesAndMaterialsNeeded +
+          newLine +
+          newLine +
+          newLine +
+          "OTHER INFORMATION" +
+          newLine +
+          newLine +
+          "Special Instruction: " +
+          data?.specialInstructions || "",
     });
     if (response?.data?.[0]?.code) {
       ZOHO.CRM.UI.Popup.closeReload();
@@ -1013,6 +1021,48 @@ function App() {
                   {...field}
                   sx={{ mb: "1rem", mt: "5px" }}
                   error={errors["suppliesAndMaterialsNeeded"]}
+                />
+              </>
+            )}
+          />
+
+          <Typography
+            variant="p"
+            sx={{
+              pb: "1.2rem",
+              fontSize: "1.2rem",
+              fontWeight: "bold",
+              display: "block",
+              mt: 2,
+            }}
+          >
+            OTHER INFORMATION
+          </Typography>
+
+          <Typography sx={{ fontSize: "14px", mb: "1rem" }}>
+            Enter any other information necessary for the job.
+          </Typography>
+
+          <Controller
+            control={control}
+            name="specialInstructions"
+            defaultValue=""
+            render={({ field }) => (
+              <>
+                <FormLabel
+                  id="name"
+                  sx={{ mb: "10px", mt: "16px", color: "black" }}
+                >
+                  Special Instructions
+                </FormLabel>
+                <TextField
+                  multiline
+                  rows={3}
+                  id="specialInstructions"
+                  variant="outlined"
+                  fullWidth
+                  {...field}
+                  sx={{ mb: "1rem", mt: "5px" }}
                 />
               </>
             )}
