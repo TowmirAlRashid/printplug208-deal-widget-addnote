@@ -154,6 +154,11 @@ function App() {
           "GRAPHIC INFO" +
           newLine +
           newLine +
+          "SGraphic(s) Description: " +
+          data?.graphicDescription ||
+        "" +
+          newLine +
+          newLine +
           "Preferred graphic application if any: " +
           data?.preferedGraphicApplication?.join(", ") +
           newLine +
@@ -246,7 +251,8 @@ function App() {
           newLine +
           newLine +
           "Special Instruction: " +
-          data?.specialInstructions || "",
+          data?.specialInstructions ||
+        "",
     });
     if (response?.data?.[0]?.code) {
       ZOHO.CRM.UI.Popup.closeReload();
@@ -444,6 +450,31 @@ function App() {
           >
             GRAPHIC INFO
           </Typography>
+
+          <Controller
+            control={control}
+            name="graphicDescription"
+            defaultValue=""
+            render={({ field }) => (
+              <>
+                <FormLabel
+                  id="name"
+                  sx={{ mb: "10px", mt: "16px", color: "black" }}
+                >
+                  Graphic(s) Description
+                </FormLabel>
+                <TextField
+                  multiline
+                  rows={3}
+                  id="graphicDescription"
+                  variant="outlined"
+                  fullWidth
+                  {...field}
+                  sx={{ mb: "1rem", mt: "5px" }}
+                />
+              </>
+            )}
+          />
 
           <Controller
             control={control}
