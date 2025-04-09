@@ -154,7 +154,7 @@ function App() {
           "GRAPHIC INFO" +
           newLine +
           newLine +
-          "SGraphic(s) Description: " +
+          "Graphic(s) Description: " +
           data?.graphicDescription ||
         "" +
           newLine +
